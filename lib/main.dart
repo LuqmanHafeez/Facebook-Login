@@ -1,7 +1,18 @@
+import 'package:facebooklogin/controllers/logincontroller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    title: "Facebook Login",
-  ));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<LoginController>(create: (context) {
+          return LoginController();
+        })
+      ],
+      child: const MaterialApp(
+        title: "Facebook Login",
+      ),
+    ),
+  );
 }
