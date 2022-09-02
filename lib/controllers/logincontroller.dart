@@ -22,8 +22,8 @@ class LoginController with ChangeNotifier {
         notifyListeners();
       }
     } catch (e) {
-      Exception("Exception :$e ");
-      debugPrint("Exception :$e ");
+      Exception("Exception is this   :$e ");
+      debugPrint("Exception is this  :$e ");
     }
   }
 

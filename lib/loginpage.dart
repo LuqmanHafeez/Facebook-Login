@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  loginUI() async {
+  loginUI() {
     return Consumer<LoginController>(builder: (_, model, child) {
       if (model.userDetails != null) {
         return loggedInUser(model);
@@ -32,8 +32,8 @@ class _LoginPageState extends State<LoginPage> {
     });
   }
 
-  loggedInUser(LoginController model) async {
-    Center(
+  loggedInUser(LoginController model) {
+    return Center(
       child: Column(
         children: [
           CircleAvatar(
@@ -53,12 +53,14 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  loggedInController(BuildContext context) async {
-    GestureDetector(
-      child: Image.asset("image/facebook.png"),
-      onTap: () {
-        Provider.of<LoginController>(context, listen: false).facebookLogin();
-      },
+  loggedInController(BuildContext context) {
+   return Center(
+      child: GestureDetector(
+        child: Image.asset("image/facebook.png"),
+        onTap: () {
+          Provider.of<LoginController>(context, listen: false).facebookLogin();
+        },
+      ),
     );
   }
 }
