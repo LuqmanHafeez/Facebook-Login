@@ -1,4 +1,5 @@
 import 'package:facebooklogin/controllers/logincontroller.dart';
+import 'package:facebooklogin/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +13,7 @@ void main() {
       ],
       child: const MaterialApp(
         title: "Facebook Login",
+        home: LoginPage(),
       ),
     ),
   );
