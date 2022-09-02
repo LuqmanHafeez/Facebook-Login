@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
               label: const Text("Logout"),
               onPressed: () {
                 Provider.of<LoginController>(context, listen: false)
-                    .facebookLogin();
+                    .facebookLogout();
               })
         ],
       ),
