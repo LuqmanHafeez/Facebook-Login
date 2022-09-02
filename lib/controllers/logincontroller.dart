@@ -6,7 +6,7 @@ class LoginController with ChangeNotifier {
   UserDetails? userDetails;
 
   facebookLogin() async {
-    try {
+    
       LoginResult result = await FacebookAuth.i
           .login(permissions: const ['email', 'public_profile']);
 
@@ -21,10 +21,6 @@ class LoginController with ChangeNotifier {
         );
         notifyListeners();
       }
-    } catch (e) {
-      Exception("Exception is this   :$e ");
-      debugPrint("Exception is this  :$e ");
-    }
   }
 
   facebookLogout() async {

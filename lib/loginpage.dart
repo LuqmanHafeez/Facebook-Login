@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   loginUI() {
-    return Consumer<LoginController>(builder: (_, model, child) {
+    return Consumer<LoginController>(builder: (_, model, __) {
       if (model.userDetails != null) {
         return loggedInUser(model);
       } else {
@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   loggedInController(BuildContext context) {
-   return Center(
+    return Center(
       child: GestureDetector(
         child: Image.asset("image/facebook.png"),
         onTap: () {
