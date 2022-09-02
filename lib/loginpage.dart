@@ -42,6 +42,12 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Text(model.userDetails!.displayName ?? ""),
           Text(model.userDetails!.email ?? ""),
+          ActionChip(
+              label: const Text("Logout"),
+              onPressed: () {
+                Provider.of<LoginController>(context, listen: false)
+                    .facebookLogin();
+              })
         ],
       ),
     );
@@ -51,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
     GestureDetector(
       child: Image.asset("image/facebook.png"),
       onTap: () {
-        Provider.of(context, listen: false).LoginController;
+        Provider.of<LoginController>(context, listen: false).facebookLogin();
       },
     );
   }
